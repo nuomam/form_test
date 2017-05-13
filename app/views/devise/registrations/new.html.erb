@@ -4,14 +4,35 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+    <%= f.input :last_name, label: "NOM", required: true, autofocus: true %>
+    <%= f.input :first_name, label: "PRENOM", required: true, autofocus: true %>
+    <%= f.input :email, label: "EMAIL", required: true, autofocus: true %>
+    <%= f.input :address, label: "ADDRESSE", required: true, autofocus: true %>
+    <%= f.input :postal_code, label: "CODE POSTAL", required: true, autofocus: true %>
+    <%= f.input :city, label: "VILLE", required: true, autofocus: true %>
+  </div>
+    <% generated_password = Devise.friendly_token.first(8) %>
+    <%= f.hidden_field :password, value: generated_password %>
+  <div class="form-inputs">
+    <p>Dites nous les domaines que vous aimez et dans lesquels vous souhaiteriez tester un produit :</p>
+    <%= f.input :general_diy, label: "Bricolage général"%>
+    <%= f.input :electricity, label: "Electricité"%>
+    <%= f.input :plumbing, label: "Plomberie"%>
+    <%= f.input :building, label: "Batiment"%>
+    <%= f.input :gardening, label: "Jardinage"%>
+    <%= f.input :decoration, label: "Décoration"%>
+  </div>
+
+  <div class="form-inputs">
+    <%= f.input :regulation_accepted, label: "J'accepte le règlement."%>
+    <%= f.input :weldom_tester, label: "J'accepte de recevoir les informations de Weldom sur cette addresse e-mail."%>
+  </div>
+
+<!--     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+    <%= f.input :password_confirmation, required: true %> -->
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "JE CONTINUE" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>

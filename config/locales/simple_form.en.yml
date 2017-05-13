@@ -29,3 +29,34 @@ en:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+fr:
+  simple_form:
+    "oui": 'Oui'
+    "non": 'Non'
+    required:
+      text: 'requis'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Merci de lire le problème ci-dessous :"
+    # Examples
+    # labels:
+    #   defaults:
+    #     password: 'Mot de passe'
+    #   user:
+    #     new:
+    #       email: 'E-mail pour s'inscrire.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'Aucun caractère spécial.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'Rather not say'
+    # prompts:
+    #   defaults:
+    #     age: 'Sélectionnez votre âge'
